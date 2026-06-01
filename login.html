@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color"
+content="#E1306C">
+
+<title>Z Dental Clinics WiFi</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+width:100%;
+overflow-x:hidden;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:18px;
+
+background:
+radial-gradient(
+circle at top left,
+#FFD776 0%,
+#FCAF45 18%,
+#F56040 38%,
+#E1306C 58%,
+#C13584 78%,
+#833AB4 100%
+);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* LIGHT EFFECTS */
+
+body::before{
+
+content:"";
+
+position:absolute;
+
+width:520px;
+height:520px;
+
+background:
+rgba(255,255,255,0.28);
+
+border-radius:50%;
+
+top:-180px;
+left:-180px;
+
+filter:blur(90px);
+
+}
+
+body::after{
+
+content:"";
+
+position:absolute;
+
+width:520px;
+height:520px;
+
+background:
+rgba(255,255,255,0.28);
+
+border-radius:50%;
+
+bottom:-180px;
+right:-180px;
+
+filter:blur(90px);
+
+}
+
+/* CARD */
+
+.card{
+
+position:relative;
+
+width:100%;
+max-width:430px;
+
+background:
+rgba(255,255,255,0.10);
+
+backdrop-filter:blur(20px);
+
+border:
+1px solid rgba(255,255,255,0.18);
+
+border-radius:34px;
+
+padding:20px;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.22);
+
+text-align:center;
+
+z-index:2;
+
+}
+
+/* HERO */
+
+.hero{
+
+position:relative;
+
+width:100%;
+height:340px;
+
+border-radius:28px;
+
+overflow:hidden;
+
+margin-bottom:26px;
+
+box-shadow:
+0 18px 40px rgba(0,0,0,0.18);
+
+}
+
+.hero img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+object-position:center;
+
+display:block;
+
+transform:scale(1.05);
+
+animation:zoomHero 12s ease-in-out infinite alternate;
+
+}
+
+@keyframes zoomHero{
+
+from{
+transform:scale(1.05);
+}
+
+to{
+transform:scale(1.12);
+}
+
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+linear-gradient(
+to top,
+rgba(0,0,0,0.14),
+rgba(0,0,0,0.02)
+);
+
+}
+
+/* BADGE */
+
+.badge{
+
+display:inline-block;
+
+padding:10px 18px;
+
+background:
+rgba(255,255,255,0.20);
+
+border-radius:999px;
+
+color:white;
+
+font-size:13px;
+
+font-weight:600;
+
+margin-bottom:18px;
+
+backdrop-filter:blur(12px);
+
+}
+
+/* SUBTITLE */
+
+.subtitle{
+
+font-size:16px;
+
+line-height:1.8;
+
+color:rgba(255,255,255,0.96);
+
+margin-top:8px;
+
+margin-bottom:34px;
+
+}
+
+/* STEP BUTTON */
+
+.step-btn{
+
+display:flex;
+align-items:center;
+
+margin-bottom:22px;
+
+}
+
+/* STEP NUMBER */
+
+.step-number{
+
+width:38px;
+height:38px;
+
+min-width:38px;
+
+border-radius:50%;
+
+background:
+rgba(255,255,255,0.24);
+
+color:white;
+
+border:
+1px solid rgba(255,255,255,0.32);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:15px;
+font-weight:700;
+
+margin-right:14px;
+
+backdrop-filter:blur(10px);
+
+box-shadow:
+0 4px 12px rgba(0,0,0,0.08);
+
+}
+
+/* BUTTON */
+
+.btn{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+border-radius:22px;
+
+font-size:17px;
+
+font-weight:600;
+
+text-decoration:none;
+
+cursor:pointer;
+
+transition:0.3s ease;
+
+}
+
+.btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 12px 28px rgba(0,0,0,0.16);
+
+}
+
+/* INSTAGRAM BUTTON */
+
+.instagram{
+
+background:
+linear-gradient(
+135deg,
+#833AB4,
+#C13584,
+#F77737
+);
+
+color:white;
+
+box-shadow:
+0 10px 28px rgba(193,53,132,0.30);
+
+}
+
+/* ICON */
+
+.icon{
+
+margin-right:10px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+}
+
+/* FOOTER */
+
+.footer{
+
+margin-top:16px;
+
+font-size:13px;
+
+color:rgba(255,255,255,0.90);
+
+}
+
+.footer strong{
+
+color:white;
+
+}
+
+/* TABLET */
+
+@media(max-width:768px){
+
+.hero{
+height:300px;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+body{
+padding:14px;
+}
+
+.card{
+padding:16px;
+border-radius:28px;
+}
+
+.hero{
+height:260px;
+border-radius:24px;
+}
+
+.badge{
+font-size:12px;
+padding:8px 16px;
+}
+
+.subtitle{
+font-size:15px;
+margin-bottom:28px;
+}
+
+.step-number{
+width:34px;
+height:34px;
+min-width:34px;
+font-size:13px;
+}
+
+.btn{
+padding:16px;
+font-size:15px;
+border-radius:18px;
+}
+
+.footer{
+font-size:12px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<!-- HERO -->
+
+<div class="hero">
+
+<img
+src="cabinet.jpg"
+alt="Z Dental Clinics">
+
+</div>
+
+<!-- BADGE -->
+
+<div class="badge">
+
+✨ WiFi gratuit pour les patients
+
+</div>
+
+<!-- SUBTITLE -->
+
+<p class="subtitle">
+
+Retrouvez les conseils du Docteur Taha Zade.
+
+</p>
+
+<!-- INSTAGRAM BUTTON -->
+
+<div class="step-btn">
+
+
+
+<a
+class="btn instagram"
+href="#"
+onclick="openInstagramAndLogin()"
+>
+
+<span class="icon">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+width="22"
+height="22"
+viewBox="0 0 24 24"
+fill="white">
+
+<path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0 1 20 7.75v8.5C20 18.32 18.32 20 16.25 20h-8.5C5.68 20 4 18.32 4 16.25v-8.5C4 5.68 5.68 4 7.75 4zm8.75 1a1.25 1.25 0 1 0 0 2.5A1.25 1.25 0 0 0 16.5 5zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6a3 3 0 0 1 0-6z"/>
+
+</svg>
+
+</span>
+
+Nous suivre sur Instagram
+
+</a>
+
+</div>
+
+<!-- LOGIN -->
+
+$(if chap-id)
+
+<script src="/md5.js"></script>
+
+<script>
+
+function doLogin() {
+
+var user = "patient";
+
+var pass = "123456";
+
+var chapPassword =
+hexMD5(
+'$(chap-id)' +
+pass +
+'$(chap-challenge)'
+);
+
+var form = document.createElement("form");
+
+form.method = "post";
+
+form.action = "$(link-login-only)";
+
+form.style.display = "none";
+
+form.innerHTML = `
+
+<input type="hidden"
+name="username"
+value="${user}">
+
+<input type="hidden"
+name="password"
+value="${chapPassword}">
+
+<input type="hidden"
+name="dst"
+value="https://mikrotikhotspot2026.github.io/cabinet-dr-taha-zade/success.html">
+
+<input type="hidden"
+name="popup"
+value="false">
+
+`;
+
+document.body.appendChild(form);
+
+form.submit();
+
+}
+
+function openInstagramAndLogin() {
+
+    
+
+        doLogin();
+
+    
+
+}
+
+</script>
+
+$(endif)
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+Compatible <strong>Android</strong> & <strong>iPhone</strong>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
